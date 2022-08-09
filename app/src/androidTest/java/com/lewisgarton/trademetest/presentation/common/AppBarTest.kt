@@ -1,4 +1,4 @@
-package com.lewisgarton.trademetest.appbar
+package com.lewisgarton.trademetest.presentation.screens.navigation.appbar
 
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
@@ -11,7 +11,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class AppBarKtTest {
+class AppBarTest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
