@@ -30,7 +30,7 @@ class MyTrademeScreenTest {
     @Test
     fun screenHasPlaceholderTest() {
         composeTestRule
-            .onNodeWithText("My Trademe Is Currently Under Development\"")
+            .onNodeWithText("My Trademe Is Currently Under Development")
             .assertIsDisplayed()
     }
 }
