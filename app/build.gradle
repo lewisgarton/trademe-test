@@ -44,6 +44,12 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    kotlinter {
+        ignoreFailures = false
+        reporters = ["checkstyle", "plain"]
+        experimentalRules = false
+        disabledRules = ["no-wildcard-imports"]
+    }
 }
 
 dependencies {
