@@ -8,10 +8,10 @@ import java.math.BigDecimal
 class DummyListingService() : ListingService {
     private val delayInMs = 1200L
 
-    override suspend fun getLatestListings(): LatestListingsResponse {
+    override suspend fun getLatestListings(maxRows: Int): LatestListingsResponse {
         val dummyListings = mutableListOf<Listing>()
 
-        for (i in 1..20) dummyListings.add(
+        for (i in 1..maxRows) dummyListings.add(
             Listing(
                 title = "1995 Toyta Hilux Surf",
                 region = "Auckland",
