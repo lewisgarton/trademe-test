@@ -1,6 +1,6 @@
 package com.lewisgarton.trademetest.presentation.screens.discover
 
-import ListingCard
+import com.lewisgarton.trademetest.presentation.screens.discover.listingcard.ListingCard
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

@@ -12,3 +12,4 @@
 - Update page title on navigation
 - Clean up imports
 - Check code formatting
+- Move strings out to Res (Inc test tags and content descriptions)

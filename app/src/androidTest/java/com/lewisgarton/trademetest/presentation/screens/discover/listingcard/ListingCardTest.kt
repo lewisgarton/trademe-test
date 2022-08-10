@@ -1,6 +1,5 @@
 package com.lewisgarton.trademetest.presentation.screens.discover.listingcard
 
-import ListingCard
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import com.lewisgarton.trademetest.service.models.Listing

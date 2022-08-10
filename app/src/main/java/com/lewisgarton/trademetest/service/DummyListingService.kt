@@ -5,7 +5,7 @@ import com.lewisgarton.trademetest.service.models.Listing
 import kotlinx.coroutines.delay
 import java.math.BigDecimal
 
-class DummyListingService() : ListingService {
+class DummyListingService : ListingService {
     private val delayInMs = 1200L
 
     override suspend fun getLatestListings(maxRows: Int): LatestListingsResponse {

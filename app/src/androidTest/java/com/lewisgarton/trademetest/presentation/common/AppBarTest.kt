@@ -1,4 +1,4 @@
-package com.lewisgarton.trademetest.presentation.screens.navigation.appbar
+package com.lewisgarton.trademetest.presentation.common
 
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
