@@ -29,7 +29,7 @@ class PriceCardTest {
         setupComposable {
             PriceCard(
                 formattedPrice = "",
-                label = label,
+                label = label
             )
         }
 
@@ -45,7 +45,7 @@ class PriceCardTest {
         setupComposable {
             PriceCard(
                 formattedPrice = price,
-                label = "",
+                label = ""
             )
         }
 

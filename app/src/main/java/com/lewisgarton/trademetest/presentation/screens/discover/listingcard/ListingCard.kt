@@ -17,17 +17,18 @@ import com.lewisgarton.trademetest.ui.theme.Theme
 @Composable
 fun ListingCard(listing: Listing) {
     Surface() {
-        Row(modifier = Modifier
-            .padding(4.dp)
-            .fillMaxWidth()) {
-
+        Row(
+            modifier = Modifier
+                .padding(4.dp)
+                .fillMaxWidth()
+        ) {
             Row(modifier = Modifier.weight(1F).padding(all = 12.dp)) {
                 ListingThumbnail()
             }
 
             Column(modifier = Modifier.weight(3F)) {
-                Text(text = listing.region?: "", style = MaterialTheme.typography.caption)
-                Text(text = listing.title?: "", style = MaterialTheme.typography.subtitle1)
+                Text(text = listing.region ?: "", style = MaterialTheme.typography.caption)
+                Text(text = listing.title ?: "", style = MaterialTheme.typography.subtitle1)
 
                 Row(Modifier.padding(top = 24.dp)) {
                     PriceRow()

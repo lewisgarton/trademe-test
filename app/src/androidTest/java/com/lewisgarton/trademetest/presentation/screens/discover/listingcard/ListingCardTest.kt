@@ -20,14 +20,15 @@ class ListingCardTest {
     fun setupBefore() {
         composeTestRule.setContent {
             Theme {
-                ListingCard(listing = Listing(
-                    title = "Title",
-                    region = "Region",
-                    pictureHref = null,
-                    buyNowPrice = BigDecimal(33),
-                    displayPrice = "$44.50",
-                    isClassified = false
-                )
+                ListingCard(
+                    listing = Listing(
+                        title = "Title",
+                        region = "Region",
+                        pictureHref = null,
+                        buyNowPrice = BigDecimal(33),
+                        displayPrice = "$44.50",
+                        isClassified = false
+                    )
                 )
             }
         }

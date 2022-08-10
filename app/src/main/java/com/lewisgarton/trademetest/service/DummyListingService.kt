@@ -11,7 +11,7 @@ class DummyListingService() : ListingService {
     override suspend fun getLatestListings(rows: Int): LatestListingsResponse {
         val dummyListings = mutableListOf<Listing>()
 
-        for(i in 1..20) dummyListings.add(
+        for (i in 1..20) dummyListings.add(
             Listing(
                 title = "1995 Toyta Hilux Surf",
                 region = "Auckland",

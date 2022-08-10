@@ -1,14 +1,14 @@
-//package com.lewisgarton.trademetest.presentation.screens.discover.listingcard
+// package com.lewisgarton.trademetest.presentation.screens.discover.listingcard
 //
-//import androidx.compose.ui.test.assertIsDisplayed
-//import androidx.compose.ui.test.junit4.createComposeRule
-//import androidx.compose.ui.test.onNodeWithTag
-//import com.lewisgarton.trademetest.ui.theme.Theme
-//import org.junit.Assert.assertTrue
-//import org.junit.Rule
-//import org.junit.Test
+// import androidx.compose.ui.test.assertIsDisplayed
+// import androidx.compose.ui.test.junit4.createComposeRule
+// import androidx.compose.ui.test.onNodeWithTag
+// import com.lewisgarton.trademetest.ui.theme.Theme
+// import org.junit.Assert.assertTrue
+// import org.junit.Rule
+// import org.junit.Test
 //
-//class ListingThumbnailTest {
+// class ListingThumbnailTest {
 //
 //    @get:Rule
 //    val composeTestRule = createComposeRule()
@@ -30,4 +30,4 @@
 //    fun whenImageNullDisplaysPlaceHolder() {
 //        assertTrue(false)
 //    }
-//}
+// }

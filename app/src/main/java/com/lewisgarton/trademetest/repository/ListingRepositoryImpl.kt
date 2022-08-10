@@ -9,6 +9,6 @@ class ListingRepositoryImpl(
 
     override suspend fun getTwentyLatestListings(): List<Listing> {
         val response = service.getLatestListings(rows = 20)
-        return response.listings?: listOf()
+        return response.listings ?: listOf()
     }
 }
