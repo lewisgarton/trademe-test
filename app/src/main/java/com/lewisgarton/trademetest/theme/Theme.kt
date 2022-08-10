@@ -1,35 +1,30 @@
-package com.lewisgarton.trademetest.ui.theme
+package com.lewisgarton.trademetest.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-
-private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
-)
+import androidx.compose.ui.graphics.Color
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Color.White,
+    secondary = Feijoa500,
+    onPrimary = BluffOyster800
 )
 
 @Composable
-fun Theme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
-
+fun Theme(
+    content: @Composable () -> Unit
+) {
     MaterialTheme(
-        colors = colors,
+        colors = LightColorPalette,
         typography = Typography,
         shapes = Shapes,
         content = content
     )
 }
+
+val Colors.iconButton: Color
+    get() = Blue500
+val Colors.iconUnselected: Color
+    get() = Blue100

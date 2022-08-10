@@ -1,4 +1,4 @@
-package com.lewisgarton.trademetest.ui.theme
+package com.lewisgarton.trademetest.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

@@ -7,7 +7,7 @@ import com.airbnb.mvrx.Fail
 import com.airbnb.mvrx.Loading
 import com.airbnb.mvrx.Success
 import com.lewisgarton.trademetest.service.models.Listing
-import com.lewisgarton.trademetest.ui.theme.Theme
+import com.lewisgarton.trademetest.theme.Theme
 import org.junit.Rule
 import org.junit.Test
 

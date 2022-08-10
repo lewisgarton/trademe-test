@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import com.lewisgarton.trademetest.ui.theme.Theme
+import com.lewisgarton.trademetest.theme.Theme
 import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test

@@ -6,9 +6,9 @@ import kotlinx.coroutines.delay
 import java.math.BigDecimal
 
 class DummyListingService() : ListingService {
-    private val delayInMs = 500L
+    private val delayInMs = 1200L
 
-    override suspend fun getLatestListings(rows: Int): LatestListingsResponse {
+    override suspend fun getLatestListings(): LatestListingsResponse {
         val dummyListings = mutableListOf<Listing>()
 
         for (i in 1..20) dummyListings.add(

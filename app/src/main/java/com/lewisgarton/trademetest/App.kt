@@ -10,7 +10,7 @@ import com.lewisgarton.trademetest.presentation.appbar.AppBar
 import com.lewisgarton.trademetest.presentation.navigation.BottomNav
 import com.lewisgarton.trademetest.presentation.navigation.DestinationGroups
 import com.lewisgarton.trademetest.presentation.navigation.Discover
-import com.lewisgarton.trademetest.ui.theme.Theme
+import com.lewisgarton.trademetest.theme.Theme
 
 @Composable
 fun App() {

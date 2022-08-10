@@ -6,7 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
-import com.lewisgarton.trademetest.ui.theme.Theme
+import com.lewisgarton.trademetest.theme.Theme
 
 @Composable
 fun PriceCard(label: String, formattedPrice: String, alignment: Alignment.Horizontal = Alignment.End) {

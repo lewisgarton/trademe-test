@@ -32,6 +32,7 @@ fun DiscoverScreen() {
 @Composable
 fun DiscoverScreenView(state: DiscoverState) {
     Column(
+        Modifier.padding(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {

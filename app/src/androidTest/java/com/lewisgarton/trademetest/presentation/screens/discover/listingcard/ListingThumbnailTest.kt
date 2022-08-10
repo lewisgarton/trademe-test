@@ -3,7 +3,7 @@
 // import androidx.compose.ui.test.assertIsDisplayed
 // import androidx.compose.ui.test.junit4.createComposeRule
 // import androidx.compose.ui.test.onNodeWithTag
-// import com.lewisgarton.trademetest.ui.theme.Theme
+// import com.lewisgarton.trademetest.theme.Theme
 // import org.junit.Assert.assertTrue
 // import org.junit.Rule
 // import org.junit.Test
