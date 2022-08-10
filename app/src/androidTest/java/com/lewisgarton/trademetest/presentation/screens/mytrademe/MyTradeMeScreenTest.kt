@@ -2,14 +2,14 @@ package com.lewisgarton.trademetest.presentation.screens.mytrademe
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onNodeWithTag
 import com.lewisgarton.trademetest.theme.Theme
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class MyTrademeScreenTest {
+class MyTradeMeScreenTest {
     @get:Rule
     val composeTestRule = createComposeRule()
 
@@ -17,7 +17,7 @@ class MyTrademeScreenTest {
     fun setUpBefore() {
         composeTestRule.setContent {
             Theme {
-                MyTrademeScreen()
+                MyTradeMeScreen()
             }
         }
     }
@@ -30,7 +30,7 @@ class MyTrademeScreenTest {
     @Test
     fun screenHasPlaceholderTest() {
         composeTestRule
-            .onNodeWithText("My Trademe Is Currently Under Development")
+            .onNodeWithTag(MyTradeMeScreenTestTags.placeholder)
             .assertIsDisplayed()
     }
 }

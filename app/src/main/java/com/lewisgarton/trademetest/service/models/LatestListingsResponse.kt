@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class LatestListingsResponse(
     @SerializedName("List")
-    val listings: List<Listing>?
+    val listings: List<ListingDto>?
 )

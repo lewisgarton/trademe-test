@@ -3,9 +3,11 @@ package com.lewisgarton.trademetest.presentation.common
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import com.lewisgarton.trademetest.presentation.appbar.AppBar
+import com.lewisgarton.trademetest.presentation.appbar.appBarCartButtonTestTag
+import com.lewisgarton.trademetest.presentation.appbar.appBarSearchButtonTestTag
+import com.lewisgarton.trademetest.presentation.appbar.appBarTitleTestTag
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
@@ -26,21 +28,21 @@ class AppBarTest {
     @Test
     fun hasTitleText() {
         composeTestRule
-            .onNodeWithTag("appbar-title")
+            .onNodeWithTag(appBarTitleTestTag)
             .assertIsDisplayed()
     }
 
     @Test
     fun hasSearchButton() {
         composeTestRule
-            .onNodeWithContentDescription("search")
+            .onNodeWithTag(appBarSearchButtonTestTag)
             .assertHasClickAction()
     }
 
     @Test
     fun hasCartButton() {
         composeTestRule
-            .onNodeWithContentDescription("cart")
+            .onNodeWithTag(appBarCartButtonTestTag)
             .assertHasClickAction()
     }
 

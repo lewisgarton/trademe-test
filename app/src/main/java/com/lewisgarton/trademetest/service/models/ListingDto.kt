@@ -3,7 +3,7 @@ package com.lewisgarton.trademetest.service.models
 import com.google.gson.annotations.SerializedName
 import java.math.BigDecimal
 
-data class Listing(
+data class ListingDto(
     @SerializedName("Title")
     val title: String?,
     @SerializedName("Region")

@@ -2,7 +2,7 @@ package com.lewisgarton.trademetest.presentation.screens.discover.listingcard
 
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
-import com.lewisgarton.trademetest.service.models.Listing
+import com.lewisgarton.trademetest.repository.models.ListingModel
 import com.lewisgarton.trademetest.theme.Theme
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -20,7 +20,7 @@ class ListingCardTest {
         composeTestRule.setContent {
             Theme {
                 ListingCard(
-                    listing = Listing(
+                    listing = ListingModel(
                         title = "Title",
                         region = "Region",
                         pictureHref = null,
@@ -36,7 +36,7 @@ class ListingCardTest {
     @Test
     fun containsListingThumbnail() {
         composeTestRule
-            .onNodeWithTag("listing-thumbnail")
+            .onNodeWithTag(ListingThumbnailTestTags.placeholder)
             .assertIsDisplayed()
     }
 
@@ -57,7 +57,7 @@ class ListingCardTest {
     @Test
     fun containsPriceRow() {
         composeTestRule
-            .onNodeWithTag("price-row")
+            .onNodeWithTag(PriceRowTestTags.composable)
             .assertIsDisplayed()
     }
 

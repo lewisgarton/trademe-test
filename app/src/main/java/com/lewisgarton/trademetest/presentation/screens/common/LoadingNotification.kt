@@ -18,13 +18,10 @@ import com.lewisgarton.trademetest.theme.Theme
 @Composable
 fun LoadingNotification() {
     Surface(
-        modifier =
-        Modifier
-            .testTag("loading-notification")
+        modifier = Modifier.testTag(LoadingNotificationTestTags.composable)
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxSize(),
+            modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -43,4 +40,8 @@ fun PreviewLoadingNotification() {
     Theme {
         LoadingNotification()
     }
+}
+
+object LoadingNotificationTestTags {
+    const val composable = "loading-notification-tag"
 }

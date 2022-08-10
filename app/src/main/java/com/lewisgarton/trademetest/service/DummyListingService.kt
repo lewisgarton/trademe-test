@@ -1,18 +1,18 @@
 package com.lewisgarton.trademetest.service
 
 import com.lewisgarton.trademetest.service.models.LatestListingsResponse
-import com.lewisgarton.trademetest.service.models.Listing
+import com.lewisgarton.trademetest.service.models.ListingDto
 import kotlinx.coroutines.delay
 import java.math.BigDecimal
 
 class DummyListingService : ListingService {
-    private val delayInMs = 1200L
+    private val delayInMs = 500L
 
     override suspend fun getLatestListings(maxRows: Int): LatestListingsResponse {
-        val dummyListings = mutableListOf<Listing>()
+        val dummyListings = mutableListOf<ListingDto>()
 
         for (i in 1..maxRows) dummyListings.add(
-            Listing(
+            ListingDto(
                 title = "1995 Toyta Hilux Surf",
                 region = "Auckland",
                 pictureHref = null,

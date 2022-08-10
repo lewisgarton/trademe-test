@@ -8,31 +8,40 @@ import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.lewisgarton.trademetest.presentation.navigation.Discover
+import com.lewisgarton.trademetest.R
 import com.lewisgarton.trademetest.theme.Theme
 import com.lewisgarton.trademetest.theme.iconButton
+
+const val appBarTitleTestTag = "app-bar-title"
+const val appBarSearchButtonTestTag = "app-bar-search-button"
+const val appBarCartButtonTestTag = "app-bar-cart-button"
 
 @Composable
 fun AppBar() {
     TopAppBar {
         Text(
-            modifier = Modifier.testTag("appbar-title"),
-            text = Discover.title,
+            modifier = Modifier.testTag(appBarTitleTestTag),
+            text = stringResource(id = R.string.discover_title),
             style = MaterialTheme.typography.h6
         )
         Spacer(modifier = Modifier.weight(1F))
-        IconButton(onClick = { }) {
+        IconButton(
+            modifier = Modifier.testTag(appBarSearchButtonTestTag),
+            onClick = { }) {
             Icon(
                 Icons.Outlined.Search,
-                contentDescription = "search",
+                contentDescription = stringResource(id = R.string.search_button_content_description),
                 tint = MaterialTheme.colors.iconButton
             )
         }
-        IconButton(onClick = { }) {
+        IconButton(
+            modifier = Modifier.testTag(appBarCartButtonTestTag),
+            onClick = { }) {
             Icon(
                 Icons.Outlined.ShoppingCart,
-                contentDescription = "cart",
+                contentDescription = stringResource(id = R.string.cart_button_content_description),
                 tint = MaterialTheme.colors.iconButton
             )
         }

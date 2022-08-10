@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.lewisgarton.trademetest.R
 import com.skydoves.landscapist.glide.GlideImage
@@ -13,16 +14,16 @@ import com.skydoves.landscapist.glide.GlideImage
 @Composable
 fun ListingThumbnail(imageHref: String?) {
     if (!imageHref.isNullOrEmpty()) {
-        Surface(modifier = Modifier.testTag("listing-thumbnail")) {
+        Surface(modifier = Modifier.testTag(ListingThumbnailTestTags.thumbnail)) {
             GlideImage(
                 imageModel = imageHref
             )
         }
     }
     Icon(
-        modifier = Modifier.testTag("listing-thumbnail-placeholder"),
+        modifier = Modifier.testTag(ListingThumbnailTestTags.placeholder),
         painter = painterResource(id = R.drawable.ic_no_picture_large),
-        contentDescription = ""
+        contentDescription = stringResource(id = R.string.listing_thumbnail_content_description)
     )
 }
 
@@ -30,4 +31,9 @@ fun ListingThumbnail(imageHref: String?) {
 @Composable
 fun PreviewListingThumbnail() {
     ListingThumbnail(imageHref = null)
+}
+
+object ListingThumbnailTestTags {
+    const val thumbnail = "listing-thumbnail-thumbnail"
+    const val placeholder = "listing-thumbnail-placeholder"
 }

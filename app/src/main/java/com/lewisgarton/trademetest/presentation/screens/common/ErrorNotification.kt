@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -21,7 +22,9 @@ import com.lewisgarton.trademetest.theme.Theme
 
 @Composable
 fun ErrorNotification(message: String) {
-    Surface(modifier = Modifier.testTag("error-notification")) {
+    Surface(
+        modifier = Modifier.testTag(ErrorNotificationTestTags.composable)
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxSize(),
@@ -30,13 +33,13 @@ fun ErrorNotification(message: String) {
         ) {
             Icon(
                 painter = painterResource(id = R.drawable.ic_error_large),
-                contentDescription = "error icon",
-                tint = MaterialTheme.colors.error
+                contentDescription = stringResource(id = R.string.error_icon_content_description),
+                tint = MaterialTheme.colors.error,
             )
             Text(
                 modifier = Modifier
                     .padding(24.dp)
-                    .testTag("error-message"),
+                    .testTag(ErrorNotificationTestTags.errorMessage),
                 textAlign = TextAlign.Center,
                 text = message,
                 style = MaterialTheme.typography.h6
@@ -51,4 +54,9 @@ fun PreviewErrorNotification() {
     Theme {
         ErrorNotification(message = "Oops... This is not good at all!")
     }
+}
+
+object ErrorNotificationTestTags {
+    const val composable = "error-notification-tag"
+    const val errorMessage = "error-notification-error-message"
 }

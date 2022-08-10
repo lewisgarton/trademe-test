@@ -23,7 +23,7 @@ class DiscoverViewModel(initialState: DiscoverState) : MavericksViewModel<Discov
 
         viewModelScope.launch {
             try {
-                val listings = repo.getTwentyLatestListings()
+                val listings = repo.getLatestListings()
                 setState {
                     copy(latestListings = Success(listings))
                 }
@@ -31,10 +31,7 @@ class DiscoverViewModel(initialState: DiscoverState) : MavericksViewModel<Discov
                 e.printStackTrace()
                 Log.e(null, null, e)
                 setState {
-                    copy(
-                        latestListings = Fail(e),
-                        errorMessage = "Oops.... This is awkward, please reopen the page!"
-                    )
+                    copy(latestListings = Fail(e))
                 }
             }
         }

@@ -21,7 +21,7 @@ class ListingThumbnailTest {
         setupComposable(url = "www.42.com")
 
         composeTestRule
-            .onNodeWithTag("listing-thumbnail")
+            .onNodeWithTag(ListingThumbnailTestTags.thumbnail)
             .assertExists()
     }
 
@@ -30,7 +30,7 @@ class ListingThumbnailTest {
         setupComposable(url = "")
 
         composeTestRule
-            .onNodeWithTag("listing-thumbnail")
+            .onNodeWithTag(ListingThumbnailTestTags.thumbnail)
             .assertDoesNotExist()
     }
 
@@ -39,7 +39,7 @@ class ListingThumbnailTest {
         setupComposable(url = null)
 
         composeTestRule
-            .onNodeWithTag("listing-thumbnail")
+            .onNodeWithTag(ListingThumbnailTestTags.thumbnail)
             .assertDoesNotExist()
     }
 
@@ -48,7 +48,7 @@ class ListingThumbnailTest {
         setupComposable(url = null)
 
         composeTestRule
-            .onNodeWithTag("listing-thumbnail-placeholder")
+            .onNodeWithTag(ListingThumbnailTestTags.placeholder)
             .assertExists()
     }
 }

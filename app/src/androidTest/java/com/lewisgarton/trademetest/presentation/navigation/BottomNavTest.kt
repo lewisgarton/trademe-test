@@ -58,7 +58,7 @@ class BottomNavTest {
     @Test
     fun hasMyTrademeTab() {
         composeTestRule
-            .onNodeWithText("My Trademe")
+            .onNodeWithText("My Trade Me")
             .assertHasClickAction()
     }
 }

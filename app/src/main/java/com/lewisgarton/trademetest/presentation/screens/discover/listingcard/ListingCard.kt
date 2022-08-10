@@ -12,12 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.lewisgarton.trademetest.service.models.Listing
+import com.lewisgarton.trademetest.repository.models.ListingModel
 import com.lewisgarton.trademetest.theme.Theme
 
 @Composable
-fun ListingCard(listing: Listing) {
-    Surface(modifier = Modifier.testTag("listing-card")) {
+fun ListingCard(listing: ListingModel) {
+    Surface(modifier = Modifier.testTag(ListingCardTestTags.composable)) {
         Row(
             modifier = Modifier
                 .padding(4.dp)
@@ -28,8 +28,8 @@ fun ListingCard(listing: Listing) {
             }
 
             Column(modifier = Modifier.weight(3F)) {
-                Text(text = listing.region ?: "", style = MaterialTheme.typography.caption)
-                Text(text = listing.title ?: "", style = MaterialTheme.typography.subtitle1)
+                Text(text = listing.region, style = MaterialTheme.typography.caption)
+                Text(text = listing.title, style = MaterialTheme.typography.subtitle1)
 
                 Row(Modifier.padding(top = 24.dp)) {
                     PriceRow()
@@ -44,7 +44,7 @@ fun ListingCard(listing: Listing) {
 fun PreviewListingCard() {
     Theme {
         ListingCard(
-            listing = Listing(
+            listing = ListingModel(
                 region = "Auckland",
                 title = "This is some stuff for sale",
                 displayPrice = "$500",
@@ -54,4 +54,8 @@ fun PreviewListingCard() {
             )
         )
     }
+}
+
+object ListingCardTestTags {
+    const val composable = "listing-card-tag"
 }

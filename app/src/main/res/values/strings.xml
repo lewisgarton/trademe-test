@@ -1,3 +1,44 @@
 <resources>
-    <string name="app_name">TrademeTest</string>
+    <string name="app_name">TradeMeTest</string>
+
+    <!-- Discover -->
+    <string name="discover_title">Browse</string>
+    <string name="price_label_buy_now">Buy Now</string>
+    <string name="price_label_no_reserve">No Reserve</string>
+    <string name="price_label_reserve_met">Reserve Met</string>
+    <string name="price_label_asking_price">Asking Price</string>
+    <string name="listing_clicked_toast">Listing has been clicked!</string>
+    <string name="listing_thumbnail_content_description">thumbnail image</string>
+
+    <!-- Watchlist-->
+    <string name="watchlist_title">Watchlist</string>
+    <string name="watchlist_placeholder">Watchlist has not yet been developed!</string>
+
+    <!-- MyTradeMe -->
+    <string name="my_trade_me_title">My Trade Me</string>
+    <string name="my_trade_me_placeholder">My Trade Me is on its way!</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_placeholder">Notifications page is coming soon!</string>
+
+
+    <!-- Navigation -->
+    <string name="discover_bottom_nav_label">Discover</string>
+    <string name="watchlist_bottom_nav_label">Watchlist</string>
+    <string name="my_trade_me_bottom_nav_label">My Trade Me</string>
+    <string name="notifications_bottom_nav_label">Notifications</string>
+
+    <!-- AppBar -->
+    <string name="search_toast">Search has not yet been developed</string>
+    <string name="search_button_content_description">search</string>
+    <string name="cart_toast">Cart has not yet been developed</string>
+    <string name="cart_button_content_description">cart</string>
+
+    <!-- Error Messages -->
+    <string name="generic_page_load_failure">"Oops.... This is awkward, please reopen the page!"</string>
+
+    <!-- Error Notification -->
+    <string name="error_icon_content_description">error icon</string>
+
 </resources>

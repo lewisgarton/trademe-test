@@ -9,7 +9,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.lewisgarton.trademetest.theme.Theme
 
 @Composable
-fun PriceCard(label: String, formattedPrice: String, alignment: Alignment.Horizontal = Alignment.End) {
+fun PriceCard(
+    label: String,
+    formattedPrice: String,
+    alignment: Alignment.Horizontal = Alignment.End
+) {
     Column(horizontalAlignment = alignment) {
         Text(formattedPrice, style = MaterialTheme.typography.h5)
         Text(label, style = MaterialTheme.typography.caption)

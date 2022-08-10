@@ -2,7 +2,7 @@ package com.lewisgarton.trademetest.presentation.screens.notifications
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
-import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onNodeWithTag
 import com.lewisgarton.trademetest.theme.Theme
 import org.junit.Assert
 import org.junit.Before
@@ -31,7 +31,7 @@ class NotificationsScreenTest {
     @Test
     fun screenHasPlaceholderTest() {
         composeTestRule
-            .onNodeWithText("Notifications Is Currently Under Development")
+            .onNodeWithTag(NotificationsScreenTestTags.placeholder)
             .assertIsDisplayed()
     }
 }

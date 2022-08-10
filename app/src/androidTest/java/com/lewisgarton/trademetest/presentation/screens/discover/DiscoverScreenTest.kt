@@ -6,7 +6,10 @@ import androidx.compose.ui.test.onNodeWithTag
 import com.airbnb.mvrx.Fail
 import com.airbnb.mvrx.Loading
 import com.airbnb.mvrx.Success
-import com.lewisgarton.trademetest.service.models.Listing
+import com.lewisgarton.trademetest.presentation.screens.common.ErrorNotificationTestTags
+import com.lewisgarton.trademetest.presentation.screens.common.LoadingNotificationTestTags
+import com.lewisgarton.trademetest.presentation.screens.discover.listingcard.ListingCardTestTags
+import com.lewisgarton.trademetest.repository.models.ListingModel
 import com.lewisgarton.trademetest.theme.Theme
 import org.junit.Rule
 import org.junit.Test
@@ -32,21 +35,20 @@ class DiscoverScreenTest {
         setupScreen(state = loadingState)
 
         composeTestRule
-            .onNodeWithTag("loading-notification")
+            .onNodeWithTag(LoadingNotificationTestTags.composable)
             .assertIsDisplayed()
     }
 
     @Test
     fun whenStateIsErrorDisplaysMessage() {
         val errorState = DiscoverState(
-            latestListings = Fail(error = Throwable()),
-            errorMessage = ""
+            latestListings = Fail(error = Throwable())
         )
 
         setupScreen(state = errorState)
 
         composeTestRule
-            .onNodeWithTag("error-notification")
+            .onNodeWithTag(ErrorNotificationTestTags.errorMessage)
             .assertIsDisplayed()
     }
 
@@ -55,7 +57,7 @@ class DiscoverScreenTest {
         val successState = DiscoverState(
             latestListings = Success(
                 listOf(
-                    Listing(
+                    ListingModel(
                         title = "",
                         region = "",
                         pictureHref = "",
@@ -70,7 +72,7 @@ class DiscoverScreenTest {
         setupScreen(state = successState)
 
         composeTestRule
-            .onNodeWithTag("listing-card")
+            .onNodeWithTag(ListingCardTestTags.composable)
             .assertIsDisplayed()
     }
 }

@@ -3,6 +3,7 @@ package com.lewisgarton.trademetest.presentation.navigation
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -25,7 +26,7 @@ fun BottomNav(navController: NavController) {
                     Icon(destination.icon, contentDescription = null)
                 },
                 label = {
-                    Text(text = destination.label)
+                    Text(text = stringResource(id = destination.labelResId))
                 },
                 selected = currentDestination?.hierarchy?.any {
                     it.route == destination.route

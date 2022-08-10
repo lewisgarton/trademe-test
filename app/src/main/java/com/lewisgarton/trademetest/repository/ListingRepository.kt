@@ -1,7 +1,7 @@
 package com.lewisgarton.trademetest.repository
 
-import com.lewisgarton.trademetest.service.models.Listing
+import com.lewisgarton.trademetest.repository.models.ListingModel
 
 interface ListingRepository {
-    suspend fun getTwentyLatestListings(): List<Listing>
+    suspend fun getLatestListings(): List<ListingModel>
 }

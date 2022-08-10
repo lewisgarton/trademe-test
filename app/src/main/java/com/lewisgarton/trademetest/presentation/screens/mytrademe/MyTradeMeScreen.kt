@@ -1,4 +1,4 @@
-package com.lewisgarton.trademetest.presentation.screens.watchlist
+package com.lewisgarton.trademetest.presentation.screens.mytrademe
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,15 +15,15 @@ import com.lewisgarton.trademetest.R
 import com.lewisgarton.trademetest.theme.Theme
 
 @Composable
-fun WatchlistScreen() {
+fun MyTradeMeScreen() {
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                modifier = Modifier.testTag(WatchlistScreenTestTags.placeholder),
-                text = stringResource(id = R.string.watchlist_placeholder)
+                modifier = Modifier.testTag(MyTradeMeScreenTestTags.placeholder),
+                text = stringResource(id = R.string.my_trade_me_placeholder),
             )
         }
     }
@@ -31,12 +31,12 @@ fun WatchlistScreen() {
 
 @Preview
 @Composable
-fun PreviewWatchlistScreen() {
+fun PreviewMyTradeMeScreen() {
     Theme {
-        WatchlistScreen()
+        MyTradeMeScreen()
     }
 }
 
-object WatchlistScreenTestTags {
-    const val placeholder = "watchlist-screen-placeholder"
+object MyTradeMeScreenTestTags {
+    const val placeholder = "my-trade-me-screen-placeholder"
 }
