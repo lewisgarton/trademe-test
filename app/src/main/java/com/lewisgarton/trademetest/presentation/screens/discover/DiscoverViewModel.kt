@@ -1,6 +1,9 @@
 package com.lewisgarton.trademetest.presentation.screens.discover
 
-import com.airbnb.mvrx.*
+import com.airbnb.mvrx.Fail
+import com.airbnb.mvrx.Loading
+import com.airbnb.mvrx.MavericksViewModel
+import com.airbnb.mvrx.Success
 import com.lewisgarton.trademetest.repository.ListingRepositoryImpl
 import com.lewisgarton.trademetest.service.DummyListingService
 import kotlinx.coroutines.CoroutineScope
