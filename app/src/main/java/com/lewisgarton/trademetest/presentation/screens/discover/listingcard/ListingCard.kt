@@ -24,7 +24,7 @@ fun ListingCard(listing: Listing) {
                 .fillMaxWidth()
         ) {
             Row(modifier = Modifier.weight(1F).padding(all = 12.dp)) {
-                ListingThumbnail()
+                ListingThumbnail(imageHref = listing.pictureHref)
             }
 
             Column(modifier = Modifier.weight(3F)) {

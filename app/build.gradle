@@ -77,5 +77,11 @@ dependencies {
 
     // Mavericks https://airbnb.io/mavericks/#/
     implementation "com.airbnb.android:mavericks-compose:2.7.0"
-    
+
+    // Glide https://github.com/bumptech/glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+    // Landscapist https://github.com/skydoves/landscapist
+    implementation "com.github.skydoves:landscapist-glide:1.5.1"
 }

@@ -1,0 +1,14 @@
+### Todo
+- Write a description of project in readme
+- Finish PriceRow (price mocked atm)
+- Finish ListingThumbnail (hack with placeholder behind GlideImage)
+  - Fit image correctly
+- Map service level DTO models to business models (Currently being passed through from service layer to presentation)
+- Add refresh functionality to discover screen
+  - Create Event for MVI
+- Add toasts to app bar buttons
+- Add unit tests to service/repo layers
+- Add padding to Discover screen (listview coverd by app bar)
+- Update page title on navigation
+- Clean up imports
+- Check code formatting
