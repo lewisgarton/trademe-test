@@ -1,0 +1,39 @@
+package com.lewisgarton.trademetest.presentation.screens.discover
+
+import com.airbnb.mvrx.*
+import com.lewisgarton.trademetest.repository.ListingRepositoryImpl
+import com.lewisgarton.trademetest.service.DummyListingService
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+class DiscoverViewModel(initialState: DiscoverState) : MavericksViewModel<DiscoverState>(
+    initialState
+) {
+    private val repo = ListingRepositoryImpl(service = DummyListingService())
+
+    private fun getListings() = CoroutineScope(Dispatchers.IO).launch {
+        setState { copy(latestListings = Loading()) }
+
+        viewModelScope.launch {
+            try {
+                val listings = repo.getTwentyLatestListings()
+                setState {
+                    copy(latestListings = Success(listings))
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                setState {
+                    copy(
+                        latestListings = Fail(e),
+                        errorMessage = "Oops.... This is awkward, please reopen the page!"
+                    )
+                }
+            }
+        }
+    }
+
+    init {
+        getListings()
+    }
+}
