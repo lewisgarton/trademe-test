@@ -71,7 +71,8 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
     // Retrofit https://square.github.io/retrofit/
-    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
     // Mavericks https://airbnb.io/mavericks/#/
     implementation "com.airbnb.android:mavericks-compose:2.7.0"
